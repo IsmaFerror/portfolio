@@ -691,8 +691,93 @@ section.animate-in {
     gap: 15px; /* Espacio entre botones */
 }
 
-/* Ajustamos los botones para que tengan 100% de ancho dentro de la tarjeta */
+
 .profile-card__actions .btn {
     width: 100%;
-    margin: 0; /* Reseteamos márgenes */
+    margin: 0; 
+}
+
+/*Arreglos para dispositivos móviles <3 */
+
+@media (max-width: 768px) {
+
+    /* --- 1. ARREGLO NAVBAR (Para que no se peguen) --- */
+    .navbar {
+        display: flex; /* Revertir de grid a flex */
+        flex-direction: column; /* Apilar logo y enlaces */
+        padding: 15px 0;
+    }
+    .logo {
+        grid-column: auto; /* Resetear grid */
+        justify-self: center; /* Centrar logo */
+    }
+    .nav-links {
+        grid-column: auto; /* Resetear grid */
+        justify-self: center;
+        margin-top: 15px;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+    .nav-links li {
+        margin: 5px 10px; /* Márgenes más ajustados para mejor "wrap" */
+    }
+
+    
+    /* --- 2. ARREGLO PROYECTOS (Para que se vean todos) --- */
+    .projects-section {
+        height: auto; /* Forzar a que la sección se expanda */
+        overflow: visible; /* Prevenir que se corte el contenido */
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+        height: auto; /* Forzar a que la grid se expanda */
+    }
+    .project-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+
+    /* --- 3. ARREGLO CONTACTO (Iconos y botón) --- */
+    .contact-card {
+        padding: 30px 20px;
+    }
+    
+    /* Apilamos el botón y los iconos verticalmente */
+    .form-footer {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 30px; /* Espacio entre el botón y los iconos */
+    }
+
+    .contact-form button {
+        width: 100%; /* Botón "Enviar" ocupa todo el ancho */
+    }
+    
+    .social-links {
+        margin-top: 0; /* Quitar margen extra */
+    }
+    
+    .social-links a {
+        font-size: 2em; /* Tamaño de icono proporcionado */
+        margin: 0 15px; 
+    }
+
+    
+    /* --- 4. ARREGLO FOOTER (Para que aparezca) --- */
+    .main-footer {
+        display: block; /* Asegurarse de que el footer se vea */
+        padding: 40px 20px;
+        position: relative;
+    }
+
+    /* Limpieza de reglas antiguas de móvil */
+    .btn {
+        width: auto; /* Evita que TODOS los botones sean 100% */
+        margin-bottom: 0;
+    }
+
+    .profile-card__actions .btn {
+        width: 100%; /* Mantiene los botones de la tarjeta al 100% */
+    }
 }
