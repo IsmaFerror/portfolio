@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ismael Ferruz - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="navbar container">
+            <a href="#hero" class="logo"></a>
+            <ul class="nav-links">
+                <li><a class="about" href="#about">Sobre Mí</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero-section">
+    
+    <div class="profile-card-container">
+        <div class="profile-card">
+            
+            <div class="profile-card__header">
+                </div>
+            
+            <div class="profile-card__image">
+                <img src="img/ismael_foto_perfil.png" alt="Tu Foto de Perfil">
+            </div>
+            
+            <div class="profile-card__content">
+                <h1 class="profile-card__name">Ismael Ferruz</h1>
+                <p class="profile-card__title"><span id="typed-text"></span></p> <p class="profile-card__location"><i class="fas fa-map-marker-alt"></i> Madrid, España</p>
+            </div>
+            
+            <div class="profile-card__stats">
+                <div class="stat">
+                    <span class="stat__value">3+</span>
+                    <span class="stat__label">Certificaciones</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__value">5+</span>
+                    <span class="stat__label">Proyectos</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__value">10+</span>
+                    <span class="stat__label">Skills</span>
+                </div>
+            </div>
+            
+            <div class="profile-card__actions">
+                <a href="#contact" class="btn btn-primary">Contáctame</a>
+                <a href="path/to/your/cv.pdf" class="btn btn-secondary" download>Descargar CV</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="about" class="about-section container">
+        <h2>Sobre Mí</h2>
+        <p>
+            ¡Hola! Soy Ismael Ferruz Ortiz, un apasionado desarrollador multiplataforma con mucha pasión por el mundo de la informática. Mi viaje en la tecnología comenzó con la curiosidad por entender cómo funcionan las cosas y ha evolucionado hasta convertirme en un profesional dedicado a crear soluciones innovadoras y aplicaciones funcionales.
+        </p>
+        <p>
+            A lo largo de mi carrera, me he especializado en backend, frontend y desarrollo de aplicaciones multiplataforma. Disfruto resolviendo problemas complejos y creando soluciones eficientes y escalables.
+        </p>
+        <p>
+            Siempre estoy aprendiendo y explorando nuevas tecnologías para mantenerme al día en este sector en constante evolución. Fuera del código, me encanta leer y explorar nuevas tendencias tecnológicas.
+        </p>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2>Mis Habilidades</h2>
+            <div class="skills-grid">
+            <div class="skill-item">
+                <i class="fab fa-html5 skill-icon"></i>
+                <h3>HTML5</h3>
+            </div>
+            
+            <div class="skill-item">
+                <i class="fab fa-js-square skill-icon"></i>
+                <h3>JavaScript</h3>
+            </div>
+
+            <div class="skill-item">
+                <i class="fab fa-python skill-icon"></i>
+                <h3>Python</h3>
+                <p>Scripting & Data</p>
+            </div>
+
+            <div class="skill-item">
+                <i class="fab fa-java skill-icon"></i>
+                <h3>Java</h3>
+            </div>
+
+            <div class="skill-item">
+                <i class="fas fa-terminal skill-icon"></i>
+                <h3>Bash</h3>
+
+            </div>
+
+            <div class="skill-item">
+                <i class="fab fa-react skill-icon"></i>
+                <h3>React</h3>
+            </div>
+
+            <div class="skill-item">
+                <i class="fas fa-database skill-icon"></i>
+                <h3>Bases de Datos</h3>
+                <p>SQL</p>
+            </div>
+
+            <div class="skill-item">
+                <i class="fab fa-node-js skill-icon"></i>
+                <h3>Node.js</h3>
+            </div>
+            
+        </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section container">
+    <h2>Mis Proyectos</h2>
+    <div class="projects-grid">
+
+        <div class="project-card">
+            <img src="img/wallhaven-838lko.png" alt="App de Colección de Cartas de Jojo's">
+            <h3>Jojo's Card Collector (En Progreso)</h3>
+            <p>
+                Aplicación de escritorio en Java con interfaz gráfica (Swing/JavaFX) para coleccionar cartas de Jojo's Bizarre Adventure. Incluye un sistema "gacha" con probabilidades basadas en rareza.
+            </p>
+            <div class="project-links">
+                <a href="https://youtu.be/yB-Dovni9eM" target="_blank" class="btn btn-outline">Ver Demo (Video)</a>
+                <a href="https://github.com/IsmaFerror/jojotarotapp" target="_blank" class="btn btn-outline">Ver en GitHub</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="img/c63a72ac-cbf4-4410-8a4c-636cb2dbf919.png" alt="Script de Redimensionar Imágenes">
+            <h3>Redimensionador Masivo de Imágenes</h3>
+            <p>
+                Este script es una herramienta de automatización para la descarga y estandarización de imágenes. Su función principal es tomar una lista de URLs, descargar cada imagen y procesarla para que todas tengan un tamaño de lienzo uniforme, listas para ser usadas en una web o base de datos.
+            </p>
+            <div class="project-links">
+                <a href="https://youtu.be/De3dq6vrYd0" target="_blank" class="btn btn-outline">Ver Demo (Video)</a>
+                <a href="https://github.com/IsmaFerror/resizer" target="_blank" class="btn btn-outline">Ver en GitHub</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="img/301a26d9-d01a-4f5b-9feb-4b7421e86677.png" alt="Proyecto CRM Full Stack">
+            <h3>CRM Empresarial Full Stack</h3>
+            <p>
+                Próximo proyecto: Desarrollo de un sistema CRM (Customer Relationship Management) Full Stack para la universidad. El stack planeado incluye [React, Spring Boot, MySQL].
+            </p>
+            <div class="project-links">
+                <a href="" target="_blank" class="btn btn-outline">Ver Demo (Video)</a>
+                <a href="" target="_blank" class="btn btn-outline">Ver en GitHub</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contacto</h2>
+            <div class="contact-card">
+                <h3>¡Hablemos!</h3>
+                <p>Estoy disponible para nuevas oportunidades y colaboraciones. No dudes en contactarme.</p>
+                <form action="https://formspree.io/f/xblpdlzz" method="POST" class="contact-form">
+                    <input type="text" name="name" placeholder="Tú Nombre" required>
+                    <input type="email" name="email" placeholder="Tú Email" required>
+                    
+<textarea name="message" placeholder="Tu Mensaje" rows="5" required></textarea>
+    
+<div class="form-footer"> 
+    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/ismaelferruzortiz/?locale=es_ES" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a href="https://github.com/IsmaFerror" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+        <a href="mailto:isma53428@gmail.com"><i class="fas fa-envelope fa-2x"></i></a>
+    </div>
+</div>
+</form>
+
+    </div>
+        </div>
+            </section>
+
+                <footer class="main-footer">
+                    <div class="container">
+                    <p>&copy; <span id="current-year"></span> Ismael Ferruz Ortiz. Todos los derechos reservados.</p>
+                    <p>Diseñado con ❤️ y código.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
