@@ -374,7 +374,7 @@ section.animate-in {
 .projects-grid {
     display: flex;          /* 1. Usar Flexbox */
     flex-wrap: wrap;        /* 2. Permitir que las tarjetas bajen de línea */
-    justify-content: center;  /* 3. Centrar las tarjetas horizontalmente */
+    justify-content: flex-start;  /* 3. Centrar las tarjetas horizontalmente */
     gap: 40px;              /* 4. Mantener el espacio entre ellas */
     margin-top: 50px;
 }
