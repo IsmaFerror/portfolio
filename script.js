@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             backSpeed: 40,
             loop: true,
             showCursor: true,
-            cursorChar: '|',
+            cursorChar: '_',
         });
     }
 
