@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Animación de Scroll para Navbar (cambia fondo al hacer scroll)
+    // 2. Animación de Scroll para Navbar
     const header = document.querySelector('.main-header');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -29,19 +29,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 3. Smooth Scroll para enlaces de navegación
+    // 3. Smooth Scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
 
             if (targetElement) {
-                // Ajusta el scroll para que el contenido no quede debajo del header fijo
                 const headerOffset = header.offsetHeight;
                 const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-                const offsetPosition = elementPosition - headerOffset - 20; // 20px de padding extra
+                const offsetPosition = elementPosition - headerOffset - 20;
 
                 window.scrollTo({
                     top: offsetPosition,
@@ -51,33 +49,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 4. Animación de "Fade In" para secciones al hacer scroll (Similar a AOS)
-    const sections = document.querySelectorAll('section');
+    // 4. Animación de "Spring Physics" (REBOTE)
+    const springElements = document.querySelectorAll('.spring-up');
 
     const observerOptions = {
-        root: null, // viewport
+        root: null,
         rootMargin: '0px',
-        threshold: 0.2 // Cuando el 20% de la sección es visible
+        threshold: 0.15 
     };
 
-    const sectionObserver = new IntersectionObserver((entries, observer) => {
+    const springObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
-                // Opcional: para que la animación solo ocurra una vez
-                // observer.unobserve(entry.target);
-            } else {
-                // Opcional: para que se reinicie la animación al salir de vista
-                // entry.target.classList.remove('animate-in');
+                entry.target.classList.add('active');
+                // Dejar de observar una vez animado
+                observer.unobserve(entry.target); 
             }
         });
     }, observerOptions);
 
-    sections.forEach(section => {
-        sectionObserver.observe(section);
+    springElements.forEach(el => {
+        springObserver.observe(el);
     });
 
-    // 5. Establecer el año actual en el footer
+    // 5. Año actual
     const currentYearSpan = document.getElementById('current-year');
     if (currentYearSpan) {
         currentYearSpan.textContent = new Date().getFullYear();
